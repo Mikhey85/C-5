@@ -7,19 +7,19 @@ int[] GetArray ()
     int[] Array = new int [new Random().Next(2,10)];
     for (int i = 0; i < Array.Length; i++)
     {
-        Array[i]= new Random().Next(-99,100) ;
+        Array[i]= new Random().Next(-100,100) ;
     }
      return (Array);
  }
 
-int SumElArray (int[] Array)
+int SumNlArray (int[] Array)
 {
-    int SumElArray=0;
+    int SumNlArray=0;
     for (int i = 1; i < Array.Length; i=i+2)
     {
-        SumElArray=SumElArray+Array[i];
+        SumNlArray=SumNlArray+Array[i];
     }
-    return (SumElArray);
+    return (SumNlArray);
  }
 
 
@@ -33,4 +33,4 @@ void PrintArray (int[] Array)
 
 int[] Array = GetArray();
 PrintArray(Array);
-Console.Write($" Сумма элементов, стоящих на нечётных позициях = {SumElArray(Array)}");
+Console.Write($" Сумма элементов, стоящих на нечётных позициях = {SumNlArray(Array)}");
