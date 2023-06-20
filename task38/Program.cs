@@ -1,8 +1,7 @@
-﻿/* Задача 38: 
-Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-[3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
-*/
-double[] GetArray () //получение массива длиной от 2 до 9  элементов с вещественными значениями от -99 до 99
+// ﻿Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
+
+double[] GetArray () 
 {
     double[] Array = new double [new Random().Next(2,10)];
     for (int i = 0; i < Array.Length; i++)
@@ -12,7 +11,7 @@ double[] GetArray () //получение массива длиной от 2 д�
      return (Array);
  }
 
- double MaxArray (double[] Array) //Поиск в массиве Наибольшего значения
+ double MaxArray (double[] Array) 
 {
     double MaxArray=Array[0];
     foreach (var item in Array)
@@ -25,7 +24,7 @@ double[] GetArray () //получение массива длиной от 2 д�
     return (MaxArray);
  }
 
-double MinArray (double[] Array) //Поиск в массиве Наименьшего значения
+double MinArray (double[] Array) 
 {
     double MinArray=Array[0];
     foreach (var item in Array)
@@ -38,7 +37,7 @@ double MinArray (double[] Array) //Поиск в массиве Наименьш
     return (MinArray);
  }
 
-void PrintArray (double[] Array) //Ввыдод массива
+void PrintArray (double[] Array) 
 {
     for (int i = 0; i < Array.Length; i++)
     {
@@ -46,7 +45,7 @@ void PrintArray (double[] Array) //Ввыдод массива
     }
 }
 
-void DifMaxMinArray (double[] Array) // Ввыдод разници между наибольшим и наименьшим значением в массиве
+void DifMaxMinArray (double[] Array) 
 {
     Console.WriteLine($"Max = {MaxArray(Array)} Min = {MinArray(Array)} разница между Max и Min = {MaxArray(Array)-MinArray(Array)}");
 }
